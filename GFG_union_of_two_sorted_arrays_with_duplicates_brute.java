@@ -1,20 +1,23 @@
-class Solution {
-    // Function to return a list containing the union of the two arrays.
-    public static ArrayList<Integer> findUnion(int a[], int b[]) {
-             HashSet<Integer>s=new HashSet<>();
-        
-        for(int j:b){
-            s.add(j);
-        }
-        for(int i:a){
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      
+        SortedSet<Integer>s=new TreeSet<>();
+       
+        int arr1[]={-7,8};
+        int arr2[]={-8,-9,8,0};
+        for(int i:arr1){
             s.add(i);
         }
-       
-        ArrayList<Integer>p=new ArrayList<>(s); 
-         
-        Collections.sort(p);
-  
-        return p;
-  
+   
+         for(int j:arr2){
+            s.add(j);
+        }
+    
+          System.out.println(s);
+        
+        
+        
     }
 }
